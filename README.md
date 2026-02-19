@@ -15,7 +15,7 @@ Database configuration
 Basic application structure
 
 
-🎯 Purpose of This Repository
+## 🎯 Purpose of This Repository
 
 This repository serves as:
 
