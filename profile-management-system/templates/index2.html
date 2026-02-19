@@ -1,0 +1,31 @@
+<!DOCTYPE html>  
+<!--This will be our root page, 
+it will display all the saved profiles in the database.-->
+<html>
+   <head>
+      <title>Index Page</title>
+   </head>
+   <body>
+      <h3>Profiles</h3>
+      <a href="/add_data">ADD</a>
+      <br>
+      <table>
+         <thead>
+            <th>Id</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Age</th>
+            <th>#</th>
+         </thead>
+         {% for data in profiles %}
+         <tbody>
+            <td>{{data.id}}</td>
+            <td>{{data.first_name}}</td>
+            <td>{{data.last_name}}</td>
+            <td>{{data.age}}</td>
+            <td><a href="/delete/{{data.id}}" type="button">Delete</a></td>
+         </tbody>
+         {% endfor%}
+      </table>
+   </body>
+</html>
